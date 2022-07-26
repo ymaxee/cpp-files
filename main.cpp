@@ -29,6 +29,7 @@ void reflection(int a[][11], int b[][11]){
     }
 }
 
+
 int main(){
   cin>>n;
   int list1[11][11], list2[11][11], list3[11][11], list4[11][11];
