@@ -21,13 +21,27 @@ void rotate90(int a[][11], int b[][11]){
     }
 }
 void reflection(int a[][11], int b[][11]){
-    int f = (n-(n%2))/2;
     for (int i = 0;i<n;i++){
         for(int j=0;j<n;j++){
-            b[i][n-1]=a[i][j];
+            b[i][j]=a[i][j];
         }
     }
+    int start;
+    int end;
+    for(int i = 0;i<n;i++){
+        start = 0;
+        end = n-1;
+        while (start < end){
+            int temp = b[i][start];
+            b[i][start] = b[i][end];
+            b[i][end] = temp;
+            start++;
+            end--;
+        }
+        
+    }
 }
+
 
 
 int main(){
@@ -58,9 +72,38 @@ int main(){
         if(comp(list3, list2)){
             cout<<3;
         }else{
-
+            reflection(list1, list4);
+            if(comp(list4, list2)){
+                cout<<4;
+                return 0;
+            }else{
+                rotate90(list4, list3);
+                if(comp(list3, list2)){
+                    cout<<5;
+                    return 0;
+                }else{
+                    rotate90(list3, list4);
+                    if(comp(list4, list2)){
+                        cout<<5;
+                        return 0;
+                    }else{
+                        rotate90(list3, list4);
+                        if(comp(list4, list2)){
+                            cout<<5;
+                            return 0;
+                        }else{
+                            if(comp(list1, list2)){
+                                cout<<6;
+                                return 0;
+                            }else{
+                                cout<<7;
+                                return 0;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
   }
 } 
-  
