@@ -3,7 +3,7 @@
 using namespace std;
 
 int n;
-bool comp(int a[][11], int b[][11]){
+bool comp(char a[][11], char b[][11]){
     for (int i = 0;i<n;i++){
         for(int j=0;j<n;j++){
             if(a[i][j]!=b[i][j]){
@@ -13,14 +13,14 @@ bool comp(int a[][11], int b[][11]){
     }
     return true;
 }
-void rotate90(int a[][11], int b[][11]){
+void rotate90(char a[][11], char b[][11]){
     for (int i = 0;i<n;i++){
         for(int j=0;j<n;j++){
             b[j][n-i-1]=a[i][j];
         }
     }
 }
-void reflection(int a[][11], int b[][11]){
+void reflection(char a[][11], char b[][11]){
     for (int i = 0;i<n;i++){
         for(int j=0;j<n;j++){
             b[i][j]=a[i][j];
@@ -46,7 +46,7 @@ void reflection(int a[][11], int b[][11]){
 
 int main(){
   cin>>n;
-  int list1[11][11], list2[11][11], list3[11][11], list4[11][11];
+  char list1[11][11], list2[11][11], list3[11][11], list4[11][11];
   for (int i = 0;i<n;i++){
       for(int j=0;j<n;j++){
           cin>>list1[i][j];
