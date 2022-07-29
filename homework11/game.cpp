@@ -22,7 +22,8 @@ int main() {
         three = one+two;
         s.push(one);
         s.push(two);
-        s.push(three);
+        s.push(three); 
+        
     }else if(curr == 'D'){
         int1 = s.top();
         int1 = int1*2;
