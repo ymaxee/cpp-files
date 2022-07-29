@@ -23,7 +23,7 @@ int main() {
         s.push(one);
         s.push(two);
         s.push(three); 
-        
+
     }else if(curr == 'D'){
         int1 = s.top();
         int1 = int1*2;
@@ -40,3 +40,5 @@ int main() {
   }
   cout<<score;
 }
+//git rm -rf --cached .
+//git add .
